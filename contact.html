@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinder Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JS -->
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/BG.png" alt="DEHOPES Logo">
+            </a>
+            <div class="highlight" style="color: rgb(219, 199, 11);">DEHOPES</div>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0,60,30,0.6), rgba(0,60,30,0.6)), url('../images/hero.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We’re here to help you join and grow with Pathfinder Club!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <div class="contact-container">
+            <form id="contact-form" action="https://formspree.io/f/xjgkgvvq" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <p id="form-status"></p>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <p><i class="fa fa-envelope"></i> amoafowilliam07@gmail.com</p>
+                <p><i class="fa fa-phone"></i> +233 531 631 955</p>
+                <p><i class="fa fa-map-marker-alt"></i> Address: Sepaase</p>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 DEHOPES Pathfinder Club | Serving God and Humanity</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinder Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JS -->
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/BG.png" alt="DEHOPES Logo">
+            </a>
+            <div class="highlight" style="color: rgb(219, 199, 11);">DEHOPES</div>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0,60,30,0.6), rgba(0,60,30,0.6)), url('../images/hero.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Gallery</h1>
+            <p>Explore moments from our activities and events</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2>Pathfinder Moments</h2>
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="images/WhatsApp Image 2025-12-31 at 6.19.18 PM (1).jpeg" alt="Camping" onclick="openModal(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/WhatsApp Image 2025-12-31 at 6.19.16 PM (1).jpeg" alt="Marching" onclick="openModal(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/WhatsApp Image 2025-12-31 at 6.19.19 PM (1).jpeg" alt="Community Service" onclick="openModal(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/WhatsApp Image 2025-12-31 at 6.19.18 PM (2).jpeg" alt="Leadership Workshop" onclick="openModal(this)">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal Lightbox -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>© 2026 DEHOPES Pathfinder Club | Serving God and Humanity</p>
+    </footer>
+
+
+</body>
+
+</html>
