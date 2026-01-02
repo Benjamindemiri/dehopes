@@ -1333,3 +1333,72 @@ body {
     padding-top: 60px;
     /* Adjust this to navbar height */
 }
+
+
+/* Default gallery images for PC */
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* keeps image nicely cropped */
+}
+
+
+/* iPhone / small screens only */
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+        /* fills container */
+        height: 100%;
+        /* taller than default width */
+        object-fit: cover;
+        /* keeps aspect ratio and crops nicely */
+    }
+}
+
+
+/* Gallery image container */
+
+.gallery-item {
+    width: 150px;
+    /* frame width */
+    height: 200px;
+    /* taller than wide */
+    border-radius: 20px;
+    /* rounded corners */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* align image to top so head shows */
+    background-color: #f0f0f0;
+    margin: 10px auto;
+}
+
+
+/* Image inside the container */
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* shows full image */
+    object-position: top;
+    /* keeps top of image visible */
+    display: block;
+}
+
+
+/* Responsive adjustment for iPhone / small screens */
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 160px;
+        height: 155px;
+        border-radius: 15px;
+        background-color: #ffae00;
+    }
+}
