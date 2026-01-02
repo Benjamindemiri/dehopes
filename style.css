@@ -113,7 +113,7 @@ body {
     display: inline-block;
     padding: 14px 36px;
     background: linear-gradient(45deg, #ffd700, #ffcc00);
-    color: #003c1e;
+    color: #012212;
     font-weight: bold;
     border-radius: 50px;
     text-decoration: none;
@@ -127,7 +127,7 @@ body {
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.8);
-    color: #003c1e;
+    color: #021d0f;
 }
 
 
@@ -223,7 +223,7 @@ body {
 
 .contact-info h3 {
     margin-bottom: 20px;
-    color: #003c1e;
+    color: #021d0f;
 }
 
 .contact-info p {
@@ -241,7 +241,7 @@ body {
 }
 
 .social-icons a {
-    color: #003c1e;
+    color: #021f10;
     font-size: 20px;
     margin-right: 15px;
     transition: 0.3s;
@@ -405,7 +405,7 @@ body {
     top: -15px;
     left: 20px;
     background: gold;
-    color: #003c1e;
+    color: #012212;
     font-weight: bold;
     padding: 6px 12px;
     border-radius: 12px;
@@ -501,7 +501,7 @@ body {
 .about-text h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #003c1e;
+    color: #042213;
 }
 
 .about-text p {
@@ -631,7 +631,7 @@ body {
     bottom: 40px;
     right: 40px;
     background: gold;
-    color: #003c1e;
+    color: #042b17;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -659,7 +659,7 @@ body {
 }
 
 .dark-mode .navbar {
-    background: rgba(20, 50, 20, 0.95);
+    background: rgba(2, 22, 5, 0.95);
 }
 
 .dark-mode .hero::before {
@@ -692,7 +692,7 @@ body {
     /* Active link color */
     font-weight: bold;
     /* Optional: make it bold */
-    border-bottom: 2px solid rgba(24, 160, 24, 0.829);
+    border-bottom: 2px solid rgba(3, 31, 3, 0.829);
     /* Optional: underline effect */
 }
 
@@ -731,7 +731,7 @@ body {
     border-radius: 12px;
     outline: none;
     font-size: 16px;
-    color: #003c1e;
+    color: #01180c;
     background: rgba(255, 255, 255, 0.8);
     transition: 0.3s;
 }
@@ -756,7 +756,7 @@ body {
 #contact-form button {
     padding: 15px;
     background: gold;
-    color: #003c1e;
+    color: #062917;
     font-weight: bold;
     font-size: 18px;
     border: none;
@@ -833,7 +833,7 @@ body {
     border: none;
     outline: none;
     font-size: 17px;
-    color: #003c1e;
+    color: #062b19f6;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
@@ -843,7 +843,7 @@ body {
 #contact-form textarea:focus {
     background: rgba(255, 255, 255, 0.35);
     box-shadow: 0 0 10px gold;
-    color: #003c1e;
+    color: #031d10;
 }
 
 
@@ -1257,7 +1257,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #053118;
+    color: #043017;
     /* Darker green on hover */
 }
 
