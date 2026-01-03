@@ -1402,3 +1402,324 @@ body {
         background-color: #ffae00;
     }
 }
+
+
+/* ============================
+   RANKS & POSITIONS (NEW)
+   Uses Gallery Design Logic
+============================ */
+
+
+/* Section wrapper */
+
+.ranks-section,
+.positions-section {
+    padding: 80px 40px;
+    background: #f0f9f4;
+    text-align: center;
+}
+
+
+/* Grid (same logic as gallery-grid) */
+
+.ranks-grid,
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+/* Card style */
+
+.rank-item,
+.position-item {
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+
+/* Hover effect */
+
+.rank-item:hover,
+.position-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Image style (NO HEAD CUTTING) */
+
+.rank-item img,
+.position-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    /* shows full image */
+    object-position: top;
+    /* keeps face visible */
+    background: #f0f0f0;
+}
+
+
+/* Title */
+
+.rank-item h3,
+.position-item h3 {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003c1e;
+}
+
+
+/* Mobile fix (iPhone friendly) */
+
+@media (max-width: 768px) {
+    .rank-item img,
+    .position-item img {
+        height: 220px;
+    }
+}
+
+.positions-section {
+    padding: 80px 40px;
+    background: #f0f9f4;
+    text-align: center;
+}
+
+.positions-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #021d0f;
+}
+
+.positions-section h3 {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #064d23;
+}
+
+.positions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.position-item {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.position-item img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.position-item p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #012212;
+}
+
+.position-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive for small screens */
+
+@media (max-width: 600px) {
+    .positions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+    .position-item img {
+        width: 100px;
+        height: 120px;
+    }
+}
+
+.call-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: gold;
+    color: #003c1e;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    background-color: orange;
+    transform: scale(1.05);
+}
+
+.call-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    /* smaller default padding */
+    background-color: gold;
+    color: #003c1e;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    /* consistent font size */
+    line-height: 1.2;
+    /* tight line spacing */
+}
+
+.call-btn:hover {
+    background-color: orange;
+    transform: scale(1.05);
+}
+
+
+/* Responsive: slightly larger on phones */
+
+@media screen and (max-width: 768px) {
+    .call-btn {
+        padding: 14px 25px;
+        /* bigger for touch devices */
+        font-size: 18px;
+    }
+}
+
+
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Body */
+
+body {
+    background: #f0f9f4;
+    color: #012212;
+    padding-top: 60px;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #0B3D91;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+
+/* Ranks Section */
+
+.ranks-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+/* Each Rank */
+
+.rank {
+    margin-bottom: 50px;
+}
+
+.rank h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffae00;
+    text-align: center;
+    border-bottom: 2px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+
+/* People Grid */
+
+.rank-people {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+/* Each Person */
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.person img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Hover effect */
+
+.person img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Person Name */
+
+.person p {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #012212;
+    font-size: 14px;
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .person img {
+        width: 100px;
+        height: 130px;
+    }
+    .rank h2 {
+        font-size: 24px;
+    }
+}

@@ -12,3 +12,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.add('active');
     }
 });
+
+
+document.getElementById('callBtn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default link behavior
+    // Your phone number here
+    let phoneNumber = '+233501234567';
+    window.location.href = 'tel:' + phoneNumber;
+});
