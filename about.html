@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinder Club</title>
+    <link rel="icon" type="image/png" href="images/BG.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JS -->
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/BG.png" alt="DEHOPES Logo">
+            </a>
+            <div class="highlight" style="color: rgb(219, 199, 11);">DEHOPES</div>
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="ranks.html">Ranks</a></li>
+                <li><a href="positions.html">Positions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0,60,30,0.6), rgba(0,60,30,0.6)), url('../images/hero.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>About Doves Of Hope And Squeakers Of Hope Pathfinder Club</h1>
+            <p>Guiding young people to grow in spirit, mind, and body</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>The Pathfinder Club is a worldwide program of the Seventh-day Adventist Church designed to empower young people to develop leadership, teamwork, and service skills. Through camping, community service, and spiritual growth, we help youth
+                    become responsible citizens and devoted members of society.</p>
+                <p>We strive to nurture character, encourage discipline, and inspire excellence in every member.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/WhatsApp Image 2025-12-31 at 6.19.18 PM.jpeg" alt="Pathfinder Activities">
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="values-container">
+            <div class="value-card">
+                <i class="fa fa-shield-alt fa-2x" style="color: gold;"></i>
+                <h3>Discipline</h3>
+                <p>We teach members to live structured, responsible, and principled lives.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa fa-users fa-2x" style="color: gold;"></i>
+                <h3>Leadership</h3>
+                <p>Empowering young people to lead with integrity and vision.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa fa-hands-helping fa-2x" style="color: gold;"></i>
+                <h3>Service</h3>
+                <p>Encouraging community service and helping others selflessly.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Fullscreen Popup -->
+    <div id="fullPopup" style="
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #FFD700, #FF4500, #FF1493);
+    z-index: 9999;
+    text-align: center;
+    color: black;
+    font-family: 'Arial Black', sans-serif;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+">
+
+        <div style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: pop 0.8s ease-out;
+        width: 90%;
+        max-width: 600px;
+    ">
+            <h1 id="fullHeading" style="font-size:3rem; animation: swing 2s infinite;">🚀 Youth Camp Deadline!</h1>
+            <h2 id="fullCountdown" style="font-size:4rem; animation: zoomBounce 1.5s infinite alternate;"></h2>
+            <p style="font-size:1.5rem; animation: rainbowText 3s infinite;">Register before November 30!</p>
+            <button onclick="closeFullPopup()" style="
+            margin-top: 30px;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            background: black;
+            color: rgb(245, 245, 245);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            animation: pulse 1.2s infinite;
+        ">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showFullPopup() {
+            document.getElementById('fullPopup').style.display = 'block';
+        }
+
+        function closeFullPopup() {
+            document.getElementById('fullPopup').style.display = 'none';
+        }
+
+        // Countdown
+        const deadlineFull = new Date("November 30, 2026 23:59:59").getTime();
+        const countdownFull = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = deadlineFull - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const counter = document.getElementById("fullCountdown");
+            counter.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            const colors = ["#FFD700", "#FF4500", "#FF1493", "#00FFFF", "#00FF7F"];
+            counter.style.color = colors[Math.floor(Math.random() * colors.length)];
+
+            if (distance < 0) {
+                clearInterval(countdownFull);
+                counter.innerHTML = "⏰ Deadline Passed!";
+                counter.style.color = "red";
+            }
+        }, 1000);
+
+        // Show popup after 1 second
+        setTimeout(showFullPopup, 1000);
+    </script>
+
+    <!-- CSS Animations -->
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pop {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            70% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        @keyframes swing {
+            0% {
+                transform: rotate(-10deg);
+            }
+            50% {
+                transform: rotate(10deg);
+            }
+            100% {
+                transform: rotate(-10deg);
+            }
+        }
+        
+        @keyframes zoomBounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes rainbowText {
+            0% {
+                color: #ffffff;
+            }
+            25% {
+                color: #000000;
+            }
+            50% {
+                color: #ffffff;
+            }
+            75% {
+                color: #ffffff;
+            }
+            100% {
+                color: #ffffff;
+            }
+        }
+        /* Make text responsive on small screens */
+        
+        @media (max-width: 600px) {
+            #fullHeading {
+                font-size: 2rem !important;
+            }
+            #fullCountdown {
+                font-size: 2.5rem !important;
+            }
+            button {
+                font-size: 18px !important;
+                padding: 15px 25px !important;
+            }
+            p {
+                font-size: 1.2rem !important;
+            }
+        }
+    </style>
+
+    <footer>
+        <p>© 2026 DEHOPES Pathfinder Club | Serving God and Humanity</p>
+    </footer>
+
+</body>
+
+</html>
