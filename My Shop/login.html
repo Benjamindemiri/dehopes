@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W MALL— Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div id="stars"></div>
+</body>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">W MALL</h2>
+
+            <!-- Dark mode toggle -->
+            <div class="toggle-container">
+                <input type="checkbox" id="darkSwitch">
+                <label for="darkSwitch">
+            <button id="darkToggle" class="toggle-btn">🌙 Dark Mode</button>
+             
+        </label>
+            </div>
+        </nav>
+
+        <div class="brand">
+            <div class="logo">WM</div>
+            <div>
+                <div style="font-weight:800">W MALL</div>
+                <div class="muted" style="font-size:13px">Quality groceries • Delivered fast</div>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="offers.html">Offers</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="admin.html">Admin</a>
+            <a href="cart.html">Cart</a>
+            <a href="product.html">Product</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+
+        <div class="search">
+            <input id="homeSearch" placeholder="Search products, e.g. tomatoes">
+            <button class="cta" onclick="gotoSearch()">Search</button>
+        </div>
+
+
+
+
+
+        <main class="container">
+            <div class="card auth">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label>Email</label>
+                    <input type="email" name="email" required />
+                    <label>Password</label>
+                    <input type="password" name="password" required />
+                    <button class="cta" type="submit">Login</button>
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </form>
+            </div>
+        </main>
+        <footer class="footer" style="background-color:rgb(19, 195, 226)">
+            <div style="color:black">© W MALL — Fast local groceries</div>
+            <div style="color: black;">Made with care • Pay safely</div>
+        </footer>
+        <div id="stars"></div>
+        <script src="app.js"></script>
+</body>
+
+
+</body>
+
+</html>
